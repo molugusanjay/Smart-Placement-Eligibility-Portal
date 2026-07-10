@@ -452,7 +452,7 @@ function showCriteriaDetails(companyId) {
     // Branch matching check
     const allowedBranchesStr = company.allowed_branches;
     let branchPass = true;
-    if (allowedBranchesStr.lower() !== 'all') {
+    if (allowedBranchesStr.toLowerCase() !== 'all') {
         const allowed = allowedBranchesStr.split(',').map(b => b.trim().toLowerCase());
         branchPass = allowed.includes(studentProfile.branch.trim().toLowerCase());
     }
